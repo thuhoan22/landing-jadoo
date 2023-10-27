@@ -1,0 +1,54 @@
+.footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  background-color: $black;
+
+  &-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 36px 90px;
+
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 40px;
+      height: 1px;
+      margin-left: -20px;
+      background: rgba($white, .4);
+      content: '';
+
+      @include respond-below ($screen-md) {
+        display: none;
+      }
+    }
+  }
+
+  .contacts {
+    display: flex;
+    align-items: center;
+
+    &-item {
+      margin-right: 20px;
+      font-weight: 600;
+      color: #666;
+
+      a {
+        margin-left: 10px;
+        color: $white;
+        transition: all .5s ease;
+      }
+    }
+  }
+
+  .copyright {
+    font-weight: 600;
+  }
+}
